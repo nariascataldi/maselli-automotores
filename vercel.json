@@ -1,0 +1,6 @@
+{
+  "buildCommand": "python3 build.py",
+  "outputDirectory": ".",
+  "framework": null,
+  "installCommand": "echo 'No install needed'"
+}
