@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paleta de Colores - Maselli Automotores</title>
+    <!-- Importando las tipografías oficiales de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Variables CSS con los colores oficiales */
+            --azul-corporativo: #0A1628;
+            --plata-acero: #8C9BAB;
+            --blanco-puro: #FFFFFF;
+            --gris-antracita: #2D3748;
+            --dorado-acento: #C9A84C;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f5;
+            color: #333;
+            margin: 0;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: var(--azul-corporativo);
+            margin-bottom: 50px;
+            text-align: center;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .palette-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            justify-content: center;
+        }
+
+        .color-card {
+            background: var(--blanco-puro);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .color-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-swatch {
+            height: 180px;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .color-swatch-light {
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .color-info {
+            padding: 25px;
+        }
+
+        .color-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin: 0 0 15px 0;
+            color: var(--azul-corporativo);
+        }
+
+        .color-codes {
+            font-size: 0.95rem;
+            color: #555;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .code-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 0;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .code-row:last-child {
+            border-bottom: none;
+        }
+
+        .code-label {
+            font-weight: 600;
+            color: #888;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .code-value {
+            font-family: monospace;
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #111;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Paleta de Colores - Maselli Automotores</h1>
+
+    <div class="palette-container">
+        
+        <!-- Azul Corporativo -->
+        <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--azul-corporativo);"></div>
+            <div class="color-info">
+                <h3 class="color-name">Azul Corporativo</h3>
+                <div class="color-codes">
+                    <div class="code-row"><span class="code-label">HEX</span> <span class="code-value">#0A1628</span></div>
+                    <div class="code-row"><span class="code-label">RGB</span> <span class="code-value">10, 22, 40</span></div>
+                    <div class="code-row"><span class="code-label">CMYK</span> <span class="code-value">100, 80, 50, 70</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plata Acero -->
+        <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--plata-acero);"></div>
+            <div class="color-info">
+                <h3 class="color-name">Plata Acero</h3>
+                <div class="color-codes">
+                    <div class="code-row"><span class="code-label">HEX</span> <span class="code-value">#8C9BAB</span></div>
+                    <div class="code-row"><span class="code-label">RGB</span> <span class="code-value">140, 155, 171</span></div>
+                    <div class="code-row"><span class="code-label">CMYK</span> <span class="code-value">40, 30, 20, 0</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blanco Puro -->
+        <div class="color-card">
+            <div class="color-swatch color-swatch-light" style="background-color: var(--blanco-puro);"></div>
+            <div class="color-info">
+                <h3 class="color-name">Blanco Puro</h3>
+                <div class="color-codes">
+                    <div class="code-row"><span class="code-label">HEX</span> <span class="code-value">#FFFFFF</span></div>
+                    <div class="code-row"><span class="code-label">RGB</span> <span class="code-value">255, 255, 255</span></div>
+                    <div class="code-row"><span class="code-label">CMYK</span> <span class="code-value">0, 0, 0, 0</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gris Antracita -->
+        <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--gris-antracita);"></div>
+            <div class="color-info">
+                <h3 class="color-name">Gris Antracita</h3>
+                <div class="color-codes">
+                    <div class="code-row"><span class="code-label">HEX</span> <span class="code-value">#2D3748</span></div>
+                    <div class="code-row"><span class="code-label">RGB</span> <span class="code-value">45, 55, 72</span></div>
+                    <div class="code-row"><span class="code-label">CMYK</span> <span class="code-value">70, 60, 50, 40</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dorado Acento -->
+        <div class="color-card">
+            <div class="color-swatch" style="background-color: var(--dorado-acento);"></div>
+            <div class="color-info">
+                <h3 class="color-name">Dorado Acento</h3>
+                <div class="color-codes">
+                    <div class="code-row"><span class="code-label">HEX</span> <span class="code-value">#C9A84C</span></div>
+                    <div class="code-row"><span class="code-label">RGB</span> <span class="code-value">201, 168, 76</span></div>
+                    <div class="code-row"><span class="code-label">CMYK</span> <span class="code-value">20, 30, 70, 10</span></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
