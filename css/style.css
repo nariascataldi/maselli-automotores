@@ -11,6 +11,7 @@
   --color-dorado: #C9A84C;
   --color-header-bg: rgba(10, 22, 40, 0.95);
   --color-header-bg-scroll: rgba(10, 22, 40, 0.98);
+  --color-hero-bg: linear-gradient(135deg, #0A1628 0%, #1a2a44 50%, #0A1628 100%);
   --gradiente-logo: linear-gradient(90deg, #C9A84C 0%, #D4B86A 50%, #C9A84C 100%);
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -24,6 +25,7 @@
   --color-dorado: #C9A84C;
   --color-header-bg: rgba(255, 255, 255, 0.95);
   --color-header-bg-scroll: rgba(255, 255, 255, 0.98);
+  --color-hero-bg: linear-gradient(135deg, #f5f5f5 0%, #ffffff 50%, #f5f5f5 100%);
 }
 
 *, *::before, *::after {
@@ -161,7 +163,7 @@ ul { list-style: none; }
   min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
   text-align: center; padding: 6rem 2rem 4rem;
-  background: linear-gradient(135deg, #0A1628 0%, #1a2a44 50%, #0A1628 100%);
+  background: var(--color-hero-bg);
 }
 .hero__content { max-width: 800px; }
 .hero__tagline {

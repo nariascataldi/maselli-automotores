@@ -25,7 +25,15 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Maselli Automotores - Compra y venta de vehículos usados en Salta Capital. Stock multimarca, asesoramiento personalizado y financiación.">
+  <meta name="robots" content="index, follow">
   <title>Maselli Automotores | Compra y venta de autos en Salta</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Maselli Automotores | Compra y venta de autos en Salta">
+  <meta property="og:description" content="Compra y venta de vehículos usados en Salta Capital. Stock multimarca, asesoramiento personalizado y financiación.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Maselli Automotores">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,6 +42,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
   <!-- Theme -->
   <meta name="theme-color" content="#0A1628">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
