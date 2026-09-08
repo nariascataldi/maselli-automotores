@@ -2,7 +2,14 @@
    MASELLI AUTOMOTORES - JavaScript Principal
    ============================================= */
 
+const WHATSAPP_NUMBER = '5493875322496';
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  // --- Centralizar WhatsApp ---
+  document.querySelectorAll('[data-whatsapp]').forEach(link => {
+    link.href = `https://wa.me/${WHATSAPP_NUMBER}`;
+  });
 
   // --- Theme Toggle (Day/Night) ---
   const themeToggle = document.querySelectorAll('.theme-toggle');
