@@ -43,6 +43,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <!-- Theme -->
   <meta name="theme-color" content="#0A1628">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
