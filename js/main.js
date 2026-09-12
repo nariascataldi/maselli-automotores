@@ -49,19 +49,52 @@ document.addEventListener('DOMContentLoaded', () => {
   const drawerClose = document.querySelector('.mobile-drawer__close');
   const drawerLinks = document.querySelectorAll('.mobile-drawer__links a');
 
+  function openDrawer() {
+    drawer.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    drawerClose?.focus();
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    hamburger.focus();
+  }
+
   if (hamburger && drawer) {
     hamburger.addEventListener('click', () => {
-      drawer.classList.add('open');
+      if (drawer.classList.contains('open')) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
     });
 
-    drawerClose?.addEventListener('click', () => {
-      drawer.classList.remove('open');
-    });
+    drawerClose?.addEventListener('click', closeDrawer);
 
     drawerLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        drawer.classList.remove('open');
-      });
+      link.addEventListener('click', closeDrawer);
+    });
+
+    drawer.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeDrawer();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const focusable = drawer.querySelectorAll('button, a[href], [tabindex]:not([tabindex="-1"])');
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     });
   }
 

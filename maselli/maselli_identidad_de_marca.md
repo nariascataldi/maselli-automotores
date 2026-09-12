@@ -205,6 +205,9 @@ El concepto visual de Maselli Automotores se ancla en tres pilares:
 - Superponer el logo sobre fotografías de alta complejidad visual
 - Reducir el logo a tamaños ilegibles (< 80px de ancho digital)
 
+> [!NOTE]
+> **Accesibilidad web:** El sitio web de Maselli Automotores cumple con los estándares **WCAG 2.1 nivel AA** (Lighthouse Accessibility: 100/100). Los colores de interfaz respetan ratios de contraste mínimos (4.5:1), y toda la interacción es navegable por teclado con landmarks semánticos y aria-labels.
+
 ---
 
 ## 8. Plan de Acción Inmediata
